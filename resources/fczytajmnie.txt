@@ -1,0 +1,4 @@
+switcht 1
+iff 2334 if  returny 21
+case 2while3 34 1
+123*12+0
