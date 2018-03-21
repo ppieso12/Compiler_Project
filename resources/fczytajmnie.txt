@@ -1,4 +1,4 @@
-switcht 1
-iff 2334 if  returny 21
-case 2while3 34 1
-123*12+0
+switcht 1 switch return
+iff if2334 aa=1 iif if switch/=12 if*=p returny 21
+case 2while3 34 1==0   a12=01
+wyrazenieLiczbowe=123*12+0

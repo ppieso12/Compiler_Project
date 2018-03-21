@@ -1,10 +1,7 @@
 package project.scanner.tokens;
 
 import project.scanner.ReturnedTuple;
-import project.scanner.tokens.Token;
-import project.scanner.tokens.TokenBasic;
 
-import java.util.ArrayList;
 
 public class TokenDigit implements Token {
 
@@ -21,21 +18,33 @@ public class TokenDigit implements Token {
 
         int end = begin;
         boolean isDigit = false; // at least one valid occurrence of digit
+        int firstChar = (int) string.charAt(end);
+
+        if((firstChar == 48)&&(string.length() - 1 != end)){   //e. g. 01 - then its error
+            //System.out.println(string + " " + string.length()+"  " +end);
+            return null;
+        }
 
         while (end < string.length()) {
 
             if (((int) string.charAt(end) >= 48) && ((int) string.charAt(end) <= 57)) {
+
                 end++;
                 isDigit = true;
+
             } else {
-                break;
+                if ((((int) string.charAt(end) >= 65) && ((int) string.charAt(end) <= 90))||        //if true then there is a char a-z / A-Z with digits - error
+                        (((int) string.charAt(end) >= 97) && ((int) string.charAt(end) <= 122))) {
+                    isDigit = false;
+                }
+                break;  // any other char, e. g. * == etc. which can be approved
             }
         }
         if (isDigit) {
             return new ReturnedTuple(end, this.id_code);
         }
 
-        return null;
+        return null;   // for example useful for erros etc.
     }
 
     public int getNumber() {

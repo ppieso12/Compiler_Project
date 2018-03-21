@@ -32,7 +32,7 @@ public class Main {
         }
 
         for(TokenOutput ready : tokenOutputs){
-            System.out.println("TOKEN--ID:"+ready.getId_code()+"--DESC:"+ready.getDescription());
+            System.out.println("TOKEN--ID "+ready.getId_code()+"--DESC "+ready.getDescription());
         }
     }
 }

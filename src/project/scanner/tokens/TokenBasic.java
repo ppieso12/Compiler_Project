@@ -26,7 +26,7 @@ public class TokenBasic implements Token {
         }
 
         if(this.description.equals(string.substring(begin,begin+this.description.length()))){
-            //System.out.println("Dupiaatatastsad");
+
 
             return new ReturnedTuple(begin+this.description.length(),this.id_code);
         }else{

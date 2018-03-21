@@ -20,31 +20,37 @@ public class TokenId implements Token {
     public ReturnedTuple match(int begin, String string) {
 
         int end = begin;
-        boolean isSetOfChars = false; // at least one valid occurrence of chars
-        boolean afterFirstExecLoop = false;
+        boolean ifFirstIsChar = false;  // at least one valid occurrence of chars
+        int loop_counter = 0;
 
         while (end < string.length()) {
 
-           /* if(afterFirstExecLoop){  //if first is a char then second can be number or char
+            if(ifFirstIsChar){  //if first is a char then second can be figure or char
                 if (((int) string.charAt(end) >= 48) && ((int) string.charAt(end) <= 57)) {
                     end++;
+                    continue;
                 }
-            }*/
-            if ((((int) string.charAt(end) >= 65) && ((int) string.charAt(end) <= 90))||
+            }
+
+            if ((((int) string.charAt(end) >= 65) && ((int) string.charAt(end) <= 90))||        //is a char
                     (((int) string.charAt(end) >= 97) && ((int) string.charAt(end) <= 122))){
 
                 end++;
-                isSetOfChars = true;
+
+                if(loop_counter == 0){
+                    ifFirstIsChar = true;
+                }
             } else {
                 break;
             }
-            afterFirstExecLoop = true;
-        }
-        if (isSetOfChars) {
-            return new ReturnedTuple(end, this.id_code);
+            loop_counter++;
         }
 
-        return null;
+        if (ifFirstIsChar) {
+            return new ReturnedTuple(end, this.id_code);
+        }else{
+            return null;
+        }
     }
 
     public int getNumber() {
