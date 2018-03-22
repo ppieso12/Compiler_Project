@@ -1,4 +1,4 @@
-# Co by commity nie spamily jak powalone
+# 
 
 # Result classes
 out/
@@ -6,7 +6,6 @@ out/
 ### IntelliJ IDEA ###
 .idea
 *.iws
-*.iml
 *.ipr
 
 ### NetBeans ###

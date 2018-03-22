@@ -25,6 +25,11 @@ public class TokenId implements Token {
 
         while (end < string.length()) {
 
+            if((int) string.charAt(end) == 46){                                                  //different than illegal signs - 46'.'
+                ifFirstIsChar = false;
+                break;
+            }
+
             if(ifFirstIsChar){  //if first is a char then second can be figure or char
                 if (((int) string.charAt(end) >= 48) && ((int) string.charAt(end) <= 57)) {
                     end++;

@@ -34,7 +34,7 @@ public class TokenDigit implements Token {
 
             } else {
                 if ((((int) string.charAt(end) >= 65) && ((int) string.charAt(end) <= 90))||        //if true then there is a char a-z / A-Z with digits - error
-                        (((int) string.charAt(end) >= 97) && ((int) string.charAt(end) <= 122))) {
+                        (((int) string.charAt(end) >= 97) && ((int) string.charAt(end) <= 122))||((int) string.charAt(end) == 46)) {
                     isDigit = false;
                 }
                 break;  // any other char, e. g. * == etc. which can be approved

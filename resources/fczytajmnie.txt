@@ -1,6 +1,7 @@
 switcht 1 switch return int inte
 iff if2334 aa=1 iif0 if switch/=12 if*=p returny 21
-case 2while3 34 1==0   a12=01
+case 2while3 34 1==0   a12=
 float=
 wyrazenieLiczbowe=123*12+0
 double float doublee
+12.32 1.12 0.0001 01.001 a00.21 .12 11.32.1
