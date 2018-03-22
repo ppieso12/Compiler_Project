@@ -17,6 +17,7 @@ public class TokenDB {
 
         this.mainDataBase.add(new TokenDigitFloat(orderNumber++, "NUM_FLOAT"));
         this.mainDataBase.add(new TokenDigit(orderNumber++,"NUM_INT"));   //order of adding tokens has a meaning
+        this.mainDataBase.add((new TokenString(orderNumber++,"STRING")));
 
         this.mainDataBase.add(new TokenBasic(orderNumber++,"OP_EQ","=="));
         this.mainDataBase.add(new TokenBasic(orderNumber++,"OP_NOT_EQ","!="));
