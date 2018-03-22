@@ -35,6 +35,11 @@ public class TokenDB {
         this.mainDataBase.add(new TokenBasic(orderNumber++,"KEY_WHILE","while"));
         this.mainDataBase.add(new TokenBasic(orderNumber++,"KEY_RETURN","return"));
 
+        this.mainDataBase.add(new TokenBasic(orderNumber++,"TYPE_INT","int"));
+        this.mainDataBase.add(new TokenBasic(orderNumber++,"TYPE_DOUBLE","double"));
+        this.mainDataBase.add(new TokenBasic(orderNumber++,"TYPE_FLOAT","float"));
+        this.mainDataBase.add(new TokenBasic(orderNumber++,"TYPE_CHAR","char"));
+
         this.mainDataBase.add(new TokenId(orderNumber++,"CHARS_ID"));
         this.mainDataBase.add(new TokenError(orderNumber++,"FATAL_ERROR"));
 

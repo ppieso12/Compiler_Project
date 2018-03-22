@@ -15,7 +15,7 @@ public class Main {
 
         ArrayList<TokenOutput> tokenOutputs = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Mateusz\\Desktop\\Kompilatory\\resources\\fczytajmnie.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(".\\resources\\fczytajmnie.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
 
