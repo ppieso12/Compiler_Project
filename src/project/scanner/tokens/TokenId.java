@@ -24,8 +24,13 @@ public class TokenId implements Token {
         int loop_counter = 0;
 
         while (end < string.length()) {
-
+                                                                        /*better to improve that section because of poor code*/
             if((int) string.charAt(end) == 46){                                                  //different than illegal signs - 46'.'
+                if(string.length() > end +1){                           //for files.h
+                    if((int) string.charAt(end+1)==104){
+                        return new ReturnedTuple(end+2, this.id_code);
+                    }
+                }
                 ifFirstIsChar = false;
                 break;
             }
@@ -37,8 +42,8 @@ public class TokenId implements Token {
                 }
             }
 
-            if ((((int) string.charAt(end) >= 65) && ((int) string.charAt(end) <= 90))||        //is a char
-                    (((int) string.charAt(end) >= 97) && ((int) string.charAt(end) <= 122))){
+            if (((((int) string.charAt(end) >= 65) && ((int) string.charAt(end) <= 90))||        //is a char
+                    (((int) string.charAt(end) >= 97) && ((int) string.charAt(end) <= 122)))||((int) string.charAt(end) == 95)){   //is a _
 
                 end++;
 

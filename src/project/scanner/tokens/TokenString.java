@@ -18,6 +18,7 @@ public class TokenString implements Token{
         if ((int) string.charAt(begin) == 34) {
             ///System.out.println("aa");
             if (string.indexOf("\"", begin + 1) > -1) {
+
                 return new ReturnedTuple(string.indexOf("\"", begin + 1) + 1, this.id_code);
             }
         }

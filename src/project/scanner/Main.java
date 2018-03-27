@@ -19,7 +19,7 @@ public class Main {
 
         String strToAdd;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(".\\resources\\fczytajmnie.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(".\\resources\\example.c"))) {
 
             String line;
 
